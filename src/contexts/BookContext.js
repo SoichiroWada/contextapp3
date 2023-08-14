@@ -16,7 +16,7 @@ const BookContextProvider = (props) => {
         {title: "The Pilgrim's Progress", id: 10},
         {title: 'Robinson Crusoe', id: 11},
         {title: 'Gullivers Travels', id: 12},
-        {title: 'FrankensteinV', id: 13},
+        {title: 'FrankensteinVII', id: 13},
     ]);
     const handleDelete = (id) => {
         const revisedBooks = books.filter((book) => {
