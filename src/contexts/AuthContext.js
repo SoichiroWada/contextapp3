@@ -1,5 +1,6 @@
 import React, { Component, createContext } from 'react';
 
+//あいうえおかきくけこ
 export const AuthContext = createContext();
 
 class AuthContextProvider extends Component {
