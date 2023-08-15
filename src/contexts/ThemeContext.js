@@ -1,24 +1,20 @@
-import React, { createContext, Component } from 'react';
+import { useState, createContext } from 'react';
 
 export const ThemeContext = createContext();
 
-//How to rewrite this class with sfc
-class ThemeContextProvider extends Component {
-    state = {  
-        isLightTheme: true,
-        light: { syntax: '#555', ui: '#ddd', bg:'#eee' },
-        dark: { syntax: '#ddd', ui: '#333', bg:'#555' },
-    } 
-    toggleTheme = () => {
-        this.setState({ isLightTheme: !this.state.isLightTheme });
+function ThemeContextProvider ( props ) {
+    const [ isLightTheme, setIsLightTheme ] = useState( true )
+    const light = { syntax: '#555', ui: '#ddd', bg:'#eee' }
+    const dark = { syntax: '#ddd', ui: '#333', bg:'#555' }
+
+    let toggleTheme = () => {
+        setIsLightTheme(!isLightTheme)
     }
-    render() { 
-        return (
-            <ThemeContext.Provider value={{...this.state, toggleTheme: this.toggleTheme }}>
-                {this.props.children}
-            </ThemeContext.Provider>
-        );
-    }
+    return (
+        <ThemeContext.Provider value={{ isLightTheme, light, dark, toggleTheme, }}>
+            { props.children }
+        </ThemeContext.Provider>
+    );
 }
  
 export default ThemeContextProvider;

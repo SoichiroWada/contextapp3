@@ -2,7 +2,6 @@ import React, { createContext, useState } from 'react';
 
 export const BookContext = createContext();
 
-//らりるれろはまやらわ
 const BookContextProvider = (props) => {
     const [books, setBooks] = useState([
         {title: 'name of the wind', id: 1},
@@ -17,7 +16,7 @@ const BookContextProvider = (props) => {
         {title: "The Pilgrim's Progress", id: 10},
         {title: 'Robinson Crusoe', id: 11},
         {title: 'Gullivers Travels', id: 12},
-        {title: 'Frankenstein-VXII', id: 13},
+        {title: 'Frankenstein-XXVXIIII', id: 13},
     ]);
     const handleDelete = (id) => {
         const revisedBooks = books.filter((book) => {
