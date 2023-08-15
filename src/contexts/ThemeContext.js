@@ -2,6 +2,7 @@ import React, { createContext, Component } from 'react';
 
 export const ThemeContext = createContext();
 
+//How to rewrite this class with sfc
 class ThemeContextProvider extends Component {
     state = {  
         isLightTheme: true,
