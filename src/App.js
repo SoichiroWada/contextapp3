@@ -5,19 +5,25 @@ import ThemeToggle from './components/ThemeToggle';
 import AuthContextProvider from './contexts/AuthContext';
 import BookContextProvider from './contexts/BookContext';
 import ThemeContextProvider from './contexts/ThemeContext';
+import HeadlineContextProvider from './contexts/HeadlineContext';
 
 function App() {
   return (
     <div className="App">
+
       <ThemeContextProvider>
         <AuthContextProvider>
-          <Navbar></Navbar>
+        <HeadlineContextProvider>
+            <Navbar></Navbar>
+        </HeadlineContextProvider>
           <BookContextProvider>
             <BookList></BookList>
           </BookContextProvider>
           <ThemeToggle></ThemeToggle>
         </AuthContextProvider>
       </ThemeContextProvider>
+
+
     </div>
   );
 }
