@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext('light');
 
 function ThemeContextProvider ( props ) {
     const [ isLightTheme, setIsLightTheme ] = useState( true )

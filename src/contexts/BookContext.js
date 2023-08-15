@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-export const BookContext = createContext();
+export const BookContext = createContext(null);
 
 const BookContextProvider = (props) => {
     const [books, setBooks] = useState([
@@ -26,7 +26,7 @@ const BookContextProvider = (props) => {
         setBooks(revisedBooks);
     }
     return (
-        <BookContext.Provider value={{books, handleDelete}}>
+        <BookContext.Provider value={{ books, handleDelete }}>
             {props.children}
         </BookContext.Provider>
     );

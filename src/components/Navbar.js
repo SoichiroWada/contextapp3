@@ -9,12 +9,12 @@ const Navbar = () => {
     return (
         <nav style={{ background: theme.ui, color: theme.syntax }}>
             <h1>Context App</h1>
-            <div>
-                { isAuthenticated ? 'Logged in' : 'Logged out' }
-            </div>
             <button onClick={ toggleAuth } id="toggleAuth">
                 { isAuthenticated ? 'LOGOUT' : 'LOGIN' }
             </button>
+            <div>
+                { isAuthenticated ? 'Logged in' : 'Logged out' }
+            </div>            
             <ul>
                 <li>Home</li>
                 <li>About</li>
